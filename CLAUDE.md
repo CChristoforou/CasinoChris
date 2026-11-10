@@ -52,6 +52,7 @@ The AI never confirms a result. A human always reviews.
   - Home: "CasinoChris QA Pipeline Home" (id 622688)
   - BRD: "BRD - CasinoChris Demo Site" (id 65842)
   - Test Report #1: "Test Report #1 - Playwright Suite" (id 655363)
+  - Test Report #2: "Test Report #2 - Registration" (id 37224449), child of the Home page
 - Reports should be plain English: what passed, what failed, why it matters, with links to the
   GitHub test file and the Jira tickets. Not raw test output.
 
@@ -67,10 +68,13 @@ The AI never confirms a result. A human always reviews.
 ## Status
 
 Done: site live, GitHub, Confluence reset, Jira registration tickets created, registration tests written.
+- Registration run end to end on 2026-11-10 (commit 2cccd99): all 8 tests passing against the live site
+  (24 of 24 runs across Chromium, Firefox and WebKit). PASS comments added to CCASINO-8 to 15, all moved
+  to Needs Human Check, and Test Report #2 written to Confluence (id 37224449).
+- Ticket descriptions for CCASINO-8 to 15 now point to the tests in `tests/registration.spec.ts`.
+- Still awaiting the owner's human review of the 8 tickets. This CLAUDE.md update is not yet committed or pushed.
 
 Not done:
-- Confirm the 8 registration tests pass against the live site
-- Write results back to Jira and Confluence after a run
 - Tickets and tests for Login, Deposit, Coin Flip and Responsible Gambling
 - Missing coverage: deposit limit enforcement, removing limits and self-exclusion, 50/50 odds check
 - Telegram bot trigger
